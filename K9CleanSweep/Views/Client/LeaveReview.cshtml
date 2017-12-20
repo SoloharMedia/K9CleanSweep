@@ -1,0 +1,29 @@
+﻿@model Review
+<div class="page-header text-center pageHeader">
+    <h2>Thanks For Leaving A Review</h2>
+</div>
+<div class="row">
+    <form asp-action="SubmitReview" method="post" asp-controller="Client">
+        <div class="input-group col-md-10 text-center" id="formBackground">
+            <div class="myInputs">
+                <div class="myRadioInputs">
+                    <input type="radio" value="1" asp-for="starRating" name="stars"
+                           onclick="CheckStarChoice()" id="oneStar" />
+                    <input type="radio" value="2" asp-for="starRating" name="stars" 
+                           onclick="CheckStarChoice()" id="twoStar" />
+                    <input type="radio" value="3" asp-for="starRating" name="stars" 
+                           onclick="CheckStarChoice()" id="threeStar" />
+                    <input type="radio" value="4" asp-for="starRating" name="stars" 
+                           onclick="CheckStarChoice()" id="fourStar" />
+                    <input type="radio" value="5" asp-for="starRating" name="stars" 
+                           onclick="CheckStarChoice()" id="fiveStar" />
+                </div>
+            </div>
+            <input type="text" class="myInputs" placeholder="Header" asp-for="Title"/>
+            <hr id="reviewLine"/>
+            <textarea class="myInputs" id="reviewMessage" placeholder="Message"
+                      asp-for="Message"></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

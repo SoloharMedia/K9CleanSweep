@@ -1,0 +1,1235 @@
+﻿@model Client
+
+<div class="page-header text-center pageHeader">
+    <h1>Please Choose A Date And Time</h1>
+</div>
+<form action="SetDayTime" method="post">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table id="calendar">
+                <tr id="tableHeaderRow">
+                    <td class="tableHeader"></td>
+                    <td class="tableHeader">Mon</td>
+                    <td class="tableHeader">Teus</td>
+                    <td class="tableHeader">Wed</td>
+                    <td class="tableHeader">Thur</td>
+                    <td class="tableHeader">Fri</td>
+                    <td class="tableHeader">Sat</td>
+                    <td class="tableHeader">Sun</td>
+                </tr>
+                <tr>
+                    <td class="calendarTimes">8:00am</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked00 == true)
+                    {
+                        <td><button value="00" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">N/A</button></td>
+                    }
+                    else
+                    {
+                        <td><button value="00" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked10 == true)
+                    {
+                        <td><button value="10" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">N/A</button></td>
+                    }
+                    else
+                    {
+                        <td><button value="10" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked20 == true)
+                    {
+                        <td><button value="20" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">N/A</button></td>
+                    }
+                    else
+                    {
+                        <td><button value="20" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked30 == true)
+                    {
+                        <td>
+                            <button value="30" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="30" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked40 == true)
+                    {
+                        <td>
+                            <button value="40" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="40" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked50 == true)
+                    {
+                        <td>
+                            <button value="50" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="50" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked60 == true)
+                    {
+                        <td>
+                            <button value="60" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="60" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">9:00am</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked01 == true)
+                    {
+                        <td>
+                            <button value="01" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="01" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked11 == true)
+                    {
+                        <td>
+                            <button value="11" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="11" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked21 == true)
+                    {
+                        <td>
+                            <button value="21" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="21" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked31 == true)
+                    {
+                        <td>
+                            <button value="31" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="31" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked41 == true)
+                    {
+                        <td>
+                            <button value="41" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="41" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked51 == true)
+                    {
+                        <td>
+                            <button value="51" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="51" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked61 == true)
+                    {
+                        <td>
+                            <button value="61" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="61" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">10:00am</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked02 == true)
+                    {
+                        <td>
+                            <button value="02" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="02" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked12 == true)
+                    {
+                        <td>
+                            <button value="12" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="12" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked22 == true)
+                    {
+                        <td>
+                            <button value="22" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="22" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked32 == true)
+                    {
+                        <td>
+                            <button value="32" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="32" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked42 == true)
+                    {
+                        <td>
+                            <button value="42" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="42" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked52 == true)
+                    {
+                        <td>
+                            <button value="52" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="52" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked62 == true)
+                    {
+                        <td>
+                            <button value="62" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="62" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">11:00am</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked03 == true)
+                    {
+                        <td>
+                            <button value="03" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="03" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked13 == true)
+                    {
+                        <td>
+                            <button value="13" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="13" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked23 == true)
+                    {
+                        <td>
+                            <button value="23" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="23" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked33 == true)
+                    {
+                        <td>
+                            <button value="33" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="33" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked43 == true)
+                    {
+                        <td>
+                            <button value="43" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="43" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked53 == true)
+                    {
+                        <td>
+                            <button value="53" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="53" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked63 == true)
+                    {
+                        <td>
+                            <button value="63" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="63" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">12:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked04 == true)
+                    {
+                        <td>
+                            <button value="04" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="04" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked14 == true)
+                    {
+                        <td>
+                            <button value="14" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="14" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked24 == true)
+                    {
+                        <td>
+                            <button value="24" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="24" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked34 == true)
+                    {
+                        <td>
+                            <button value="34" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="34" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked44 == true)
+                    {
+                        <td>
+                            <button value="44" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="44" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked54 == true)
+                    {
+                        <td>
+                            <button value="54" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="54" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked64 == true)
+                    {
+                        <td>
+                            <button value="64" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="64" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">1:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked05 == true)
+                    {
+                        <td>
+                            <button value="05" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="05" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked15 == true)
+                    {
+                        <td>
+                            <button value="15" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="15" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked25 == true)
+                    {
+                        <td>
+                            <button value="25" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="25" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked35 == true)
+                    {
+                        <td>
+                            <button value="35" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="35" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked45 == true)
+                    {
+                        <td>
+                            <button value="45" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="45" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked55 == true)
+                    {
+                        <td>
+                            <button value="55" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="55" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked65 == true)
+                    {
+                        <td>
+                            <button value="65" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="65" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">2:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked06 == true)
+                    {
+                        <td>
+                            <button value="06" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="06" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked16 == true)
+                    {
+                        <td>
+                            <button value="16" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="16" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked26 == true)
+                    {
+                        <td>
+                            <button value="26" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="26" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked36 == true)
+                    {
+                        <td>
+                            <button value="36" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="36" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked46 == true)
+                    {
+                        <td>
+                            <button value="46" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="46" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked56 == true)
+                    {
+                        <td>
+                            <button value="56" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="56" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked66 == true)
+                    {
+                        <td>
+                            <button value="66" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="66" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">3:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked07 == true)
+                    {
+                        <td>
+                            <button value="07" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="07" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked17 == true)
+                    {
+                        <td>
+                            <button value="17" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="17" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked27 == true)
+                    {
+                        <td>
+                            <button value="27" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="27" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked37 == true)
+                    {
+                        <td>
+                            <button value="37" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="37" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked47 == true)
+                    {
+                        <td>
+                            <button value="47" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="47" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked57 == true)
+                    {
+                        <td>
+                            <button value="57" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="57" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked67 == true)
+                    {
+                        <td>
+                            <button value="67" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="67" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">4:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked08 == true)
+                    {
+                        <td>
+                            <button value="08" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="08" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked18 == true)
+                    {
+                        <td>
+                            <button value="18" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="18" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked28 == true)
+                    {
+                        <td>
+                            <button value="28" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="28" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked38 == true)
+                    {
+                        <td>
+                            <button value="38" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="38" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked48 == true)
+                    {
+                        <td>
+                            <button value="48" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="48" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked58 == true)
+                    {
+                        <td>
+                            <button value="58" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="58" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked68 == true)
+                    {
+                        <td>
+                            <button value="68" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="68" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">5:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked09 == true)
+                    {
+                        <td>
+                            <button value="09" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="09" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked19 == true)
+                    {
+                        <td>
+                            <button value="19" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="19" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked29 == true)
+                    {
+                        <td>
+                            <button value="29" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="29" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked39 == true)
+                    {
+                        <td>
+                            <button value="39" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="39" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked49 == true)
+                    {
+                        <td>
+                            <button value="49" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="49" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked59 == true)
+                    {
+                        <td>
+                            <button value="59" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="59" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked69 == true)
+                    {
+                        <td>
+                            <button value="69" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="69" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">6:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked010 == true)
+                    {
+                        <td>
+                            <button value="010" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="010" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked110 == true)
+                    {
+                        <td>
+                            <button value="110" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="110" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked210 == true)
+                    {
+                        <td>
+                            <button value="210" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="210" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked310 == true)
+                    {
+                        <td>
+                            <button value="310" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="310" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked410 == true)
+                    {
+                        <td>
+                            <button value="410" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="410" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked510 == true)
+                    {
+                        <td>
+                            <button value="510" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="510" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked610 == true)
+                    {
+                        <td>
+                            <button value="610" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="610" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                <tr>
+                    <td class="calendarTimes">7:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked011 == true)
+                    {
+                        <td>
+                            <button value="011" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="011" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked111 == true)
+                    {
+                        <td>
+                            <button value="111" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="111" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked211 == true)
+                    {
+                        <td>
+                            <button value="211" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="211" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked311 == true)
+                    {
+                        <td>
+                            <button value="311" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="311" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked411 == true)
+                    {
+                        <td>
+                            <button value="411" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="411" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked511 == true)
+                    {
+                        <td>
+                            <button value="511" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="511" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked611 == true)
+                    {
+                        <td>
+                            <button value="611" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="611" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+                <tr>
+                    <td class="calendarTimes">8:00pm</td>
+                    @if (K9CleanSweep.Startup.schedule.Booked012 == true)
+                    {
+                        <td>
+                            <button value="012" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="012" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked112 == true)
+                    {
+                        <td>
+                            <button value="112" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="112" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked212 == true)
+                    {
+                        <td>
+                            <button value="212" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="212" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked312 == true)
+                    {
+                        <td>
+                            <button value="312" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="312" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked412 == true)
+                    {
+                        <td>
+                            <button value="412" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="412" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked512 == true)
+                    {
+                        <td>
+                            <button value="512" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="512" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                    @if (K9CleanSweep.Startup.schedule.Booked612 == true)
+                    {
+                        <td>
+                            <button value="612" class="btn btn-danger tableButton" name="timeDay"
+                                    disabled="disabled">
+                                N/A
+                            </button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td><button value="612" class="btn btn-success tableButton" name="timeDay">Book</button></td>
+                    }
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>
+

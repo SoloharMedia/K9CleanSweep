@@ -1,0 +1,803 @@
+﻿@model Client
+<div class="text-center">
+    <h2 class="page-header">Your Current Order Details</h2>
+    <div class="col-md-4">
+        <div class="filmStripImageContainer"></div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your ID Number</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetUserID()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your Username</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetUsername()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your Password</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetUserPassword()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your Full Name</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetFullName()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your E-Mail</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetUserEmail()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your Home Address</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetAddress()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your Postal Code</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetPostalCode()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Amount Of Dogs</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetDogAmount()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your Yard Size</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetYardSize()</div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Your Service Frequency</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetService()</div>
+        </div>
+        @if (@K9CleanSweep.Startup.status.GetServiceDateTime() == "noDate")
+        {
+            <div class="panel panel-danger">
+                <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                <div class="panel-body panelInfo">Please select a date by clicking the "Service Date" tab</div>
+            </div>
+        }
+        else
+        {
+            switch (K9CleanSweep.Startup.status.GetServiceDateTime())
+            {
+                case "00":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 8:00am</div>
+                        </div>
+                        break;
+                    }
+                case "01":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 9:00am</div>
+                        </div>
+                        break;
+                    }
+                case "02":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 10:00am</div>
+                        </div>
+                        break;
+                    }
+                case "03":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 11:00am</div>
+                        </div>
+                        break;
+                    }
+                case "04":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 12:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "05":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 1:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "06":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 2:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "07":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 3:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "08":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 4:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "09":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 5:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "010":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 6:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "011":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 7:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "012":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Monday at 8:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "10":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 8:00am</div>
+                        </div>
+                        break;
+                    }
+                case "11":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 9:00am</div>
+                        </div>
+                        break;
+                    }
+                case "12":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 10:00am</div>
+                        </div>
+                        break;
+                    }
+                case "13":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 11:00am</div>
+                        </div>
+                        break;
+                    }
+                case "14":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 12:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "15":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 1:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "16":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 2:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "17":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 3:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "18":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 4:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "19":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 5:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "110":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 6:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "111":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 7:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "112":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Teusday at 8:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "20":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 8:00am</div>
+                        </div>
+                        break;
+                    }
+                case "21":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 9:00am</div>
+                        </div>
+                        break;
+                    }
+                case "22":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 10:00am</div>
+                        </div>
+                        break;
+                    }
+                case "23":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 11:00am</div>
+                        </div>
+                        break;
+                    }
+                case "24":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 12:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "25":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 1:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "26":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 2:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "27":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 3:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "28":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 4:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "29":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 5:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "210":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 6:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "211":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 7:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "212":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Wednesday at 8:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "30":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 8:00am</div>
+                        </div>
+                        break;
+                    }
+                case "31":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 9:00am</div>
+                        </div>
+                        break;
+                    }
+                case "32":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 10:00am</div>
+                        </div>
+                        break;
+                    }
+                case "33":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 11:00am</div>
+                        </div>
+                        break;
+                    }
+                case "34":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 12:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "35":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 1:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "36":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 2:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "37":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 3:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "38":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 4:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "39":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 5:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "310":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 6:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "311":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 7:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "312":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Thursday at 8:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "40":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 8:00am</div>
+                        </div>
+                        break;
+                    }
+                case "41":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 9:00am</div>
+                        </div>
+                        break;
+                    }
+                case "42":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 10:00am</div>
+                        </div>
+                        break;
+                    }
+                case "43":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 11:00am</div>
+                        </div>
+                        break;
+                    }
+                case "44":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 12:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "45":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 1:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "46":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 2:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "47":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 3:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "48":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 4:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "49":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 5:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "410":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 6:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "411":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 7:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "412":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Friday at 8:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "50":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 8:00am</div>
+                        </div>
+                        break;
+                    }
+                case "51":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 9:00am</div>
+                        </div>
+                        break;
+                    }
+                case "52":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 10:00am</div>
+                        </div>
+                        break;
+                    }
+                case "53":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 11:00am</div>
+                        </div>
+                        break;
+                    }
+                case "54":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 12:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "55":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 1:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "56":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 2:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "57":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 3:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "58":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 4:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "59":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 5:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "510":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 6:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "511":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 7:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "512":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Saturday at 8:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "60":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 8:00am</div>
+                        </div>
+                        break;
+                    }
+                case "61":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 9:00am</div>
+                        </div>
+                        break;
+                    }
+                case "62":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 10:00am</div>
+                        </div>
+                        break;
+                    }
+                case "63":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 11:00am</div>
+                        </div>
+                        break;
+                    }
+                case "64":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 12:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "65":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 1:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "66":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 2:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "67":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 3:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "68":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 4:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "69":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 5:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "610":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 6:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "611":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 7:00pm</div>
+                        </div>
+                        break;
+                    }
+                case "612":
+                    {
+                        <div class="panel panel-primary">
+                            <div class="panel-heading panelHeader">Your Service Day and Time</div>
+                            <div class="panel-body panelInfo">Sunday at 8:00pm</div>
+                        </div>
+                        break;
+                    }
+            }
+        }
+        <div class="panel panel-primary">
+            <div class="panel-heading panelHeader">Notes For Us</div>
+            <div class="panel-body panelInfo">@K9CleanSweep.Startup.status.GetNotes()</div>
+        </div>
+        <form asp-action="EditClientDetails" method="get">
+            <button type="submit" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                &nbsp;EDIT&nbsp;
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true" id="backwardsGlyph"></span>
+            </button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+

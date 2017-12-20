@@ -1,0 +1,61 @@
+﻿@model Client
+<div class="page-header text-center pageHeader">
+    <h2>Book A Scoopin'</h2>
+</div>
+<div class="row">
+    <form action="BookService" method="post">
+        <div class="input-group col-md-6 text-center" id="formBackground">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="ClientUserName"></span>
+            <input type="text" class="myInputs"
+                   asp-for="ClientUserName" placeholder="Username">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="Password"></span>
+            <input type="password" class="myInputs"
+                   asp-for="Password" placeholder="Password">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="Email"></span>
+            <input type="email" class="myInputs"
+                   asp-for="Email" placeholder="E-Mail">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="ClientName"></span>
+            <input type="text" class="myInputs"
+                   asp-for="ClientName" placeholder="First and Last Name">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="Address"></span>
+            <input type="text" class="myInputs"
+                   asp-for="Address" placeholder="Address">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="PostalCode"></span>
+            <input type="text" class="myInputs"
+                   asp-for="PostalCode" placeholder="Postal Code">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="AmountOfDogs"></span>
+            <input type="number" class="myInputs"
+                   asp-for="AmountOfDogs" placeholder="Amount Of Dogs">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="YardSqFootage"></span>
+            <input type="number" class="myInputs"
+                   asp-for="YardSqFootage" placeholder="Approx. Yard Size (Square Feet)">
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="Notes"></span>
+            <textarea asp-for="Notes" rows="3" cols="80" placeholder="Notes" 
+                      class="myInputs"></textarea>
+            <span class="alert alert-info myInputs" role="alert"
+                  asp-validation-for="Service"></span>
+            <select asp-for="Service" class="myInputs">
+                <option>One-Time</option>
+                <option>Weekly</option>
+                <option>Bi-Weekly</option>
+                <option>Monthly</option>
+            </select>
+            <label>
+                <span class="glyphicon glyphicon-arrow-up"></span>
+                Select How Often We Visit
+                <span class="glyphicon glyphicon-arrow-up"></span>
+            </label>
+            <button type="submit" class="btn btn-success center-block" id="formButton">Book A Service</button>
+        </div>
+    </form>
+</div>
+

@@ -1,0 +1,83 @@
+﻿@model Client
+<body onload="GetLocation()">
+    <div class="page-header text-center pageHeader">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="alert alert-info subHeader text-center">Meet Our Staff</div>
+    <div id="myCarousel" class="carousel slide col-md-8" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators navbar-fixed-bottom">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active text-center">
+                <img src="~/images/ProfileImage2.jpg" alt="Chania" class="employeeImages">
+                <h3>Owner</h3>
+                <h4>Jim Roberts</h4>
+                <h6>Jim.Roberts@PoochPatrol.com</h6>
+            </div>
+
+            <div class="item text-center">
+                <img src="~/images/ProfileImage3.jpg" alt="Chania" class="employeeImages">
+                <h3>Co-Owner</h3>
+                <h4>Jillian Roberts</h4>
+                <h6>Jill.Roberts@PoochPatrol.com</h6>
+            </div>
+
+            <div class="item text-center">
+                <img src="~/images/ProfileImage.jpg" alt="Flower" class="employeeImages">
+                <h3>Patrol-Crew</h3>
+                <h4>John Smith</h4>
+                <h6>John.Smith@PoochPatrol.com</h6>
+            </div>
+
+            <div class="item text-center">
+                <img src="~/images/ProfileImage4.jpg" alt="Flower" class="employeeImages">
+                <h3>Patrol-Crew</h3>
+                <h4>Heather Boat</h4>
+                <h6>Heather.Boat@PoochPatrol.com</h6>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="alert alert-info subHeader text-center">Contact Us Right Away</div>
+    <form action="mailto:hardyjohn142@hotmail.com" method="post" enctype="text/plain">
+        <div class="col-md-8 text-center" id="contactForm">
+            <input type="text" class="myInputs" placeholder="Subject" />
+            <hr id="reviewLine" />
+            <textarea class="myInputs" id="reviewMessage" placeholder="E-Mail Message"></textarea>
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-envelope"></span>
+            </button>
+        </div>
+    </form>
+    <div class="col-md-8" id="mapBackground">
+        <div id="myMap"></div>
+        <button class="btn btn-primary center-block"  id="mapButton" onclick="MyMap()">Find Us</button>
+    </div>
+    <div class="row col-md-8">
+        <address>
+            18-700 Osgoode Dr.<br />
+            London, On N6E 2H1<br />
+            <abbr title="Phone"><span class="glyphicon glyphicon-phone"></span></abbr>
+            519.226.0483
+        </address>
+        <address>
+            <strong>Support:</strong> <a href="mailto:Support@example.com">Support@PoochPatrol.com</a><br />
+        </address>
+    </div>
+</body>

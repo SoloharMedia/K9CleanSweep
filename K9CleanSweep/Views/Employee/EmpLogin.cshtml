@@ -1,0 +1,15 @@
+﻿@model Employee
+<div class="page-header text-center pageHeader">
+    <h1>Please Log-In</h1>
+</div>
+<form action="EmpLogin" method="post">
+    <div class="text-center">
+        <div class="input-group col-md-6" id="formBackground">
+            <input type="text" class="myInputs" asp-for="EmpUserName"
+                   placeholder="Username"><br />
+            <input type="password" class="myInputs" asp-for="EmpPassword"
+                   placeholder="Password"><br />
+            <button type="submit" class="btn btn-primary" id="formButton">Log In</button>
+        </div>
+    </div>
+</form>

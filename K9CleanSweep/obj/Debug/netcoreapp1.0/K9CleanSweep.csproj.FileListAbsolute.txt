@@ -1,0 +1,9 @@
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\bin\Debug\netcoreapp1.0\K9CleanSweep.deps.json
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\bin\Debug\netcoreapp1.0\K9CleanSweep.runtimeconfig.json
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\bin\Debug\netcoreapp1.0\K9CleanSweep.runtimeconfig.dev.json
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\bin\Debug\netcoreapp1.0\K9CleanSweep.dll
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\obj\Debug\netcoreapp1.0\K9CleanSweep.AssemblyInfo.cs
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\bin\Debug\netcoreapp1.0\K9CleanSweep.pdb
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\obj\Debug\netcoreapp1.0\K9CleanSweep.dll
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\obj\Debug\netcoreapp1.0\K9CleanSweep.pdb
+C:\Users\hardy\Documents\Visual Studio 2017\Projects\K9CleanSweep\K9CleanSweep\obj\Debug\netcoreapp1.0\K9CleanSweep.csprojResolveAssemblyReference.cache

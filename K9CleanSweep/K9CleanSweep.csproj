@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\images\5Stars.png" />
+    <Content Include="wwwroot\images\brokenCloudsIcon.png" />
+    <Content Include="wwwroot\images\buildingBackground.png" />
+    <Content Include="wwwroot\images\cityBackground.png" />
+    <Content Include="wwwroot\images\CleanSweepIcon.png" />
+    <Content Include="wwwroot\images\clearIcon.png" />
+    <Content Include="wwwroot\images\cloud1Dark.png" />
+    <Content Include="wwwroot\images\cloud1Darkest.png" />
+    <Content Include="wwwroot\images\cloud1Gray.png" />
+    <Content Include="wwwroot\images\cloud1White.png" />
+    <Content Include="wwwroot\images\cloud2Dark.png" />
+    <Content Include="wwwroot\images\cloud2Darkest.png" />
+    <Content Include="wwwroot\images\cloud2Gray.png" />
+    <Content Include="wwwroot\images\cloud2White.png" />
+    <Content Include="wwwroot\images\cloud3Dark.png" />
+    <Content Include="wwwroot\images\cloud3Grey.png" />
+    <Content Include="wwwroot\images\cloud3White.png" />
+    <Content Include="wwwroot\images\cloudIcon.png" />
+    <Content Include="wwwroot\images\cornStalk.png" />
+    <Content Include="wwwroot\images\dogOnGrass.jpg" />
+    <Content Include="wwwroot\images\dogPic.png" />
+    <Content Include="wwwroot\images\dropBig.png" />
+    <Content Include="wwwroot\images\dropSmall.png" />
+    <Content Include="wwwroot\images\facebookIcon.png" />
+    <Content Include="wwwroot\images\grass.jpg" />
+    <Content Include="wwwroot\images\kidsWithDogImage.jpg" />
+    <Content Include="wwwroot\images\mapIcon.png" />
+    <Content Include="wwwroot\images\mistIcon.png" />
+    <Content Include="wwwroot\images\partlyCloudyIcon.png" />
+    <Content Include="wwwroot\images\PooberIcon.png" />
+    <Content Include="wwwroot\images\poochBanner.png" />
+    <Content Include="wwwroot\images\poopPower.png" />
+    <Content Include="wwwroot\images\ProfileIcon.png" />
+    <Content Include="wwwroot\images\ProfileImage.jpg" />
+    <Content Include="wwwroot\images\ProfileImage2.jpg" />
+    <Content Include="wwwroot\images\ProfileImage3.jpg" />
+    <Content Include="wwwroot\images\ProfileImage4.jpg" />
+    <Content Include="wwwroot\images\rainIcon.png" />
+    <Content Include="wwwroot\images\ReviewIcon.png" />
+    <Content Include="wwwroot\images\snowIcon.png" />
+    <Content Include="wwwroot\images\star.png" />
+    <Content Include="wwwroot\images\thunderIcon.png" />
+    <Content Include="wwwroot\images\twitterIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.0-msbuild3-final" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.0-msbuild3-final" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,114 @@
+﻿@model Client
+@{ 
+    ViewData["clientID"] = K9CleanSweep.Startup.status.GetUserID();
+    ViewData["loggedIn"] = K9CleanSweep.Startup.status.GetStatus();
+    ViewData["empLoggedIn"] = K9CleanSweep.Startup.empStatus.GetStatus();
+}
+
+<div class="text-center">
+    <h2 class="page-header">Edit Your Details</h2>
+    <div class="col-md-3"></div>
+    <form action="EditClientDetails" method="post">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your ID Number</div>
+                <input type="text" asp-for="ClientID" readonly="readonly"
+                       value="@K9CleanSweep.Startup.status.GetUserID()"
+                       class="myInputs" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your Username</div>
+                <input type="text" asp-for="ClientUserName" readonly="readonly"
+                       value="@K9CleanSweep.Startup.status.GetUsername()"
+                       class="myInputs"/>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your Password</div>
+                <input type="password" asp-for="Password" class="myInputs"
+                       value="@K9CleanSweep.Startup.status.GetUserPassword()" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your Full Name</div>
+                <input type="text" asp-for="ClientName" class="myInputs"
+                       value="@K9CleanSweep.Startup.status.GetUsername()" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your E-Mail</div>
+                <input type="email" asp-for="Email" class="myInputs"
+                       value="@K9CleanSweep.Startup.status.GetUserEmail()" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your Home Address</div>
+                <input type="text" asp-for="Address" class="myInputs"
+                       value="@K9CleanSweep.Startup.status.GetAddress()" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your Postal Code</div>
+                <input type="text" asp-for="PostalCode" class="myInputs"
+                       value="@K9CleanSweep.Startup.status.GetPostalCode()" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Amount Of Dogs</div>
+                <input type="number" asp-for="AmountOfDogs" class="myInputs"
+                       value="@K9CleanSweep.Startup.status.GetDogAmount()" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your Yard Size</div>
+                <input type="number" asp-for="YardSqFootage" class="myInputs"
+                       value="@K9CleanSweep.Startup.status.GetYardSize()" />
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading panelHeader">Your Service Frequency</div>
+                @if (K9CleanSweep.Startup.status.GetService() == "One-Time")
+                {
+                    <select asp-for="Service" class="myInputs">
+                        <option selected>One-Time</option>
+                        <option>Weekly</option>
+                        <option>Bi-Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                }
+                else if (K9CleanSweep.Startup.status.GetService() == "Weekly")
+                {
+                    <select asp-for="Service" class="myInputs">
+                        <option>One-Time</option>
+                        <option selected>Weekly</option>
+                        <option>Bi-Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                }
+                else if (K9CleanSweep.Startup.status.GetService() == "Bi-Weekly")
+                {
+                    <select asp-for="Service" class="myInputs">
+                        <option>One-Time</option>
+                        <option>Weekly</option>
+                        <option selected>Bi-Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                }
+                else if (K9CleanSweep.Startup.status.GetService() == "Monthly")
+                {
+                    <select asp-for="Service" class="myInputs">
+                        <option>One-Time</option>
+                        <option>Weekly</option>
+                        <option>Bi-Weekly</option>
+                        <option selected>Monthly</option>
+                    </select>
+                }
+            </div>
+            <div class="jumbotron">
+                <p>
+                    To change your service date and time, Goto the Contact page and send us an 
+                    E-mail With Your:<br />
+                    <strong>Client Username</strong><br />
+                    And<br />
+                    <strong>New Date And Time</strong><br /> 
+                    (Make sure it's available)
+                </p>
+            </div>
+            <button type="submit" class="btn btn-info center-block" id="formButton">Submit Changes</button>
+        </div>
+    </form>
+
+    <div class="col-md-3"></div>
+</div>

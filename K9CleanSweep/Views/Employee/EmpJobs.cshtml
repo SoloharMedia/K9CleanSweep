@@ -1,0 +1,62 @@
+﻿@model Tuple<List<Client>, Employee>
+@{
+    Layout = "_empLayout";
+}
+
+@{ int rowCounter = 0;}
+
+<div class="page-header text-center pageHeader">
+    <h1>List Of Clients And Information</h1>
+</div>
+
+<div class="col-md-12">
+    <table class="table table-striped table-hover" id="jobTable">
+        <tr>
+            <th>Client ID</th>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>Postal Code</th>
+            <th>Dog Amount</th>
+            <th>Yard(Square Feet)</th>
+            <th>Service Frequency</th>
+            <th>Service Date And Time</th>
+            <th>Notes</th>
+        </tr>
+        @foreach (var client in Model.Item1)
+        {
+            { rowCounter++; }
+            if (rowCounter % 2 == 0)
+            {
+                <tr class="active">
+                    <td>@client.ClientID</td>
+                    <td>@client.ClientUserName</td>
+                    <td>@client.ClientName</td>
+                    <td>@client.Address</td>
+                    <td>@client.PostalCode</td>
+                    <td>@client.AmountOfDogs</td>
+                    <td>@client.YardSqFootage</td>
+                    <td>@client.Service</td>
+                    <td>@client.ServiceDateTime</td>
+                    <td>@client.Notes</td>
+                </tr>
+            }
+            else
+            {
+                <tr class="info">
+                    <td>@client.ClientID</td>
+                    <td>@client.ClientUserName</td>
+                    <td>@client.ClientName</td>
+                    <td>@client.Address</td>
+                    <td>@client.PostalCode</td>
+                    <td>@client.AmountOfDogs</td>
+                    <td>@client.YardSqFootage</td>
+                    <td>@client.Service</td>
+                    <td>@client.ServiceDateTime</td>
+                    <td>@client.Notes</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+<div class="row col-md-12"></div>
